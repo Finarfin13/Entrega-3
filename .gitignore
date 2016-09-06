@@ -10,3 +10,99 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+package entrega3.Finarfin;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Finarfin
+ */
+public class EntregaFinarfin {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Bienvenido al programa de Finarfin");
+        System.out.println("1. Factorial");
+        Scanner as = new Scanner(System.in);
+        System.out.print("Por favor elija un numero entre 1 y 6");
+        int a = as.nextInt();
+        int a_1 = a;
+        if (a < 0 || a > 6) {
+            System.out.println("Numero no valido");
+        }
+        if (a > 0 && a <= 6) {
+            int b = 1;
+            while (a > 1) {
+                b = b * a;
+                a = a - 1;
+
+            }
+            System.out.println("El producto factorial de "
+                    + (a_1) + " es: " + (b));
+
+            System.out.println("2. Producto de Wallis");
+            int c = a_1;
+            int d = 2;
+            int e = 1;
+
+            while (c > 0) {
+
+                int f = d;
+                int g = e + 2;
+                System.out.print((d) + "/" + (e)
+                        + " * " + (f) + "/" + (g) + " * ");
+                d = d + 2;
+                e = e + 2;
+
+                c = c - 2;
+            }
+
+            System.out.println("3. Diagonal");
+            int h = a_1;
+            int k = 1;
+            int l = h + 1;
+            while (h > 0) {
+                System.out.println("*");
+
+                while (k > 0) {
+                    System.out.print(" ");
+                    k = k - 1;
+                }
+                h = h - 1;
+                k = l - h;
+
+            }
+        }
+
+        Scanner sd = new Scanner(System.in);
+        System.out.println("II Numeros primos");
+        System.out.println("1. Ingrese el numero que desea evaluar");
+        int i = sd.nextInt();
+
+        if ((Math.pow(2, i) - 2) % i == 0) {
+            System.out.println("el numero " + (i) + " es primo.");
+        } else {
+            System.out.println("el numero " + (i) + " no es primo.");
+        }
+
+        Scanner df = new Scanner(System.in);
+        System.out.println("Ingrese un nuemero cualquiera");
+        int j = df.nextInt();
+
+        while (j > 0) {
+            if (j % 2 != 0 && j % 3 != 0 && j % 5 != 0 && j % 7 != 0
+                    && j % 11 != 0) {
+                System.out.println((j));
+                if (j == 11 || j == 7 || j == 5 || j == 3 || j == 2) {
+                    System.out.println((j));
+                }
+            }
+            j = j - 1;
+
+        }
+    }
+}
